@@ -39,7 +39,7 @@ def replace_string_in_file(filename, old_str, new_str):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Использование: python replace_script.py <new_string>")
+        print("Использование: crack.py <new_string>")
         sys.exit(1)
 
 
@@ -72,6 +72,8 @@ if __name__ == "__main__":
         repack_upx(file_path)
 
         print("Обработка завершена успешно.")
+        print(f"Создайте файл {new_string} и добавьте в него строку '03d40274-0435-0549-2506-820700080009' без кавычек.\n"
+              f"В конфигурации сервера используйте 'License=03d40274-0435-0549-2506-820700080009,0,MCACDhf5Fve1ROuGyx8tA5OlAg4ypJivw6hytRlYUz5arA==' без кавычек.")
 
     except subprocess.CalledProcessError as e:
         print(f"Ошибка при выполнении команды: {e}")
